@@ -20,3 +20,9 @@ color: white;
 .buttons {border-radius: 8px;}
 .buttons:hover {background-color: #0000b3;
 }	
+h1.Sub_heading {
+ font-size:1.8em;
+}
+h2.Sub_sub_heading {
+ font-size:1.2em;
+}
