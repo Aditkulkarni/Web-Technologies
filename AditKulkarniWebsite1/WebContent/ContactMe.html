@@ -9,9 +9,11 @@
 <title>Adit Kulkarni | Contact me at - aditkulkarni.12@gmail.com</title>
 <script type="text/javascript" src="analytics.js"></script>
 <link href="style.css" rel="stylesheet" type="text/css">
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
-	<div id="tabcontent" style="background-color: #000099;" >
+	<div id="tabcontent1" style="background-color: #000099;" >
 		<button id="bhmpg"class="buttons" onclick="location.href='AditKulkarniWebsite_Homepage.html'">Home Page</button>
 		<button id="bppg"class="buttons" onclick="location.href='Professional.html'">Professional</button>
 		<button id="bccpg"class="buttons" onclick="location.href='Co-curricular.html'">Co-curricular</button>
@@ -20,19 +22,54 @@
 <br>
 <br>
 <div id="ContactInfo" style="width: 100%; overflow: hidden;">
-<div style="margin-left: 1%; font-size:15px; color:##ffffff">
-<center><h1 class="Sub_heading" ><b>Contact Me</b></h1></center>
-
-<h1 class="Sub_heading">Please click the button to find my contact details-</h1>	 
-
-<button id="contactme_button" onclick="contactmeButton()">Click here to find contact details</button>
-<p id="ContactInfo"></p>
+	
+	<div style="margin-left: 1%; font-size:15px; color:##ffffff">
+	<center><h1 class="Sub_heading" ><b>Contact Me</b></h1></center>
+	
+	<h1 class="Sub_heading">Please click the button to find my contact details-</h1>	 
+	
+	<button id="contactme_button" onclick="contactmeButton()">Click here to find contact details</button>
+	<p id="ContactInfo"></p>
+	
+	
+	<script>
+	function contactmeButton() { 
+		  document.getElementById("ContactInfo").innerHTML = "Email Id - aditkulkarni.12@gmail.com | Phone number- 4126283091 | Adddress :23 Whinfield St, Poughkeepsie, NY - 12601";
+	} 
+	</script>
+	<br>
+	<script>
+	$(document).ready(function(){
+	  $("p").click(function(){
+	    alert("The paragraph was clicked.");
+	  });
+	});
+	</script>
+	<p>Click here to verify Jquery Onclick Function</p>
+	
+	<div id="Animation">
+	<script> 
+	$(document).ready(function(){
+	  $("button").click(function(){
+	    $("div").animate({left: '250px'});
+	  });
+	});
+	</script> 
+	<button>Start Jquery Animation by clicking on this button</button>
+	
+	<div style="background:#ffffff;height:100px;width:100px;position:absolute;"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	</div>
+	
+	</div>
+	</div>
 </div>
-</div>
-<script>
-function contactmeButton() { 
-	  document.getElementById("ContactInfo").innerHTML = "Email Id - aditkulkarni.12@gmail.com | Phone number- 4126283091 | Adddress :23 Whinfield St, Poughkeepsie, NY - 12601";
-} 
-</script>
+
+
 </body>
 </html>
