@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <title>Adit Kulkarni | Contact me at - aditkulkarni.12@gmail.com</title>
 <script src="analytics.js"></script>
+<!--Email Validation-->
+<script src="textVerfication.js"></script>
 <link href="style.css" rel="stylesheet" type="text/css">
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -15,7 +17,7 @@
 <!-- Navigation -->
 <body>
 	<div id="tabcontent1" style="background-color: #000099;" >
-		<button id="bhmpg" class="buttons" onclick="location.href='AditKulkarniWebsite_Homepage.html'">Home Page</button>
+		<button id="bhmpg" class="buttons" onclick="location.href='index.html'">Home Page</button>
 		<button id="bppg" class="buttons" onclick="location.href='Professional.html'">Professional</button>
 		<button id="bccpg" class="buttons" onclick="location.href='Co-curricular.html'">Co-curricular</button>
 		<button id="bcmpg" class="buttons" onclick="location.href='ContactMe.html'">Contact Me</button>
@@ -39,7 +41,7 @@
 	} 
 	</script>
 	<br>
-	<!-- Assignment 4 Jquery click function -->
+	<!-- Assignment 4 Jquery click function
 	<script>
 	$(document).ready(function(){
 	  $("p").click(function(){
@@ -47,8 +49,8 @@
 	  });
 	});
 	</script>
-	<p>Click here to verify Jquery Onclick Function</p>
-	<!-- Assignment 4 Animation using Jquery -->
+	<p>Click here to verify Jquery Onclick Function</p> -->
+	<!-- Assignment 4 Animation using Jquery 
 	<div id="Animation">
 	<script> 
 	$(document).ready(function(){
@@ -57,17 +59,53 @@
 	  });
 	});
 	</script> 
-	<button>Start Jquery Animation by clicking on this button</button>
+	<button>Start Jquery Animation by clicking on this button</button> 
+	<div style="background:#ffffff;height:100px;width:100px;position:absolute;"></div> -->
+	<br>
+
+	<form method="POST" name="myForm" action="https://formspree.io/aditkulkarni.12@gmail.com">
+  <b>First Name</b>
+  <input type="text" name="fname" value="" required="required" placeholder="Text Abc">
+  <br><br>
+  <b>Last Name</b>
+  <input type="text" name="fname" value="" required="required" placeholder="Text Abc">
+  <br><br>
+  <b>PhoneNumber</b>
+  <input type="text" name="fPhone" value="" required="required" placeholder="Number 123-456-7890" onblur="validateNumber(this);">
+  <br><br>
+  <b>Email Address</b>
+  <input type="text" name="EmailID" value="" required="required" placeholder="abc@xyz.com" onblur="validateEmail(this);">
+  <br><br>
+  <b>Message</b><br>
+  <textarea cols="57" rows="6" name="fMessage" placeholder="Text" required="required"></textarea>
+  <br><br>
+  <b>Reason of Contact</b>
+  <select id="ContactReason" name="Reason of Contact"></select>
+
+   <!--JSON File for array of data-->
+ 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+          <script >
+              var $select = $('#ContactReason');
+              $.getJSON('dropdown_data.json', function(data){
+                
+                for (var i = 0; i < data['ContactReason'].length; i++) {
+                 $select.append('<option id="' + data['ContactReason'][i]['id'] + '">' + data['ContactReason'][i]['name'] + '</option>');
+                 }
+              });
+          </script> 
+    <br>
+    <br>               
+	<div class="send">
+            <input type="submit" name="send" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">
+	</div>
 	
-	<div style="background:#ffffff;height:100px;width:100px;position:absolute;"></div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	</div>
 	</div>
 </div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 </body>
 </html>
