@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="angular.min.js"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
+	</head>
+	<body ng-app="options" ng-controller="ctrl1">
+		<h1 id="Ex1"> Example 1</h1>
+		<input type='text' ng-model="message"/>
+		<p>The entered text is displayed as: {{message}}!</p>
+		<script>
+			var app = angular.module("options", []); 
+			app.controller("ctrl1", function($scope) {
+			$scope.products = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex ea commodo consequat. ", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo"];
+			$scope.addItem = function () {
+			$scope.products.push($scope.add);
+			}    
+		});
+		</script>
+		<h1 id="Ex2"> Example 2</h1>
+		<div>
+		  <ul>
+			<li ng-repeat="x in products">{{x}}</li>
+		  </ul>
+		  <input ng-model="add">
+		  <button ng-click="addItem()">Add New Line</button>
+		</div>
+
+		<p>If you have worked with me please write in the input field to add a testimonial.</p>
+	</body>
+</html>
