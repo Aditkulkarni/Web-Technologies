@@ -29,7 +29,7 @@
             </div>
          </div>
       </div>
-      <!-- Assignment 4 .html()  
+      <!-- Assignment 4- .html()  
          <div id= ".html()">
          	<script>
          	$(document).ready(function(){

@@ -14,7 +14,7 @@
       <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
       <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
    </head>
-   <!-- Navigation -->
+   <!-- Navigation- -->
    <body>
       <div id="tabcontent1" style="background-color: #000099;" >
          <button id="bhmpg" class="buttons" onclick="location.href='index.php'">Home Page</button>
