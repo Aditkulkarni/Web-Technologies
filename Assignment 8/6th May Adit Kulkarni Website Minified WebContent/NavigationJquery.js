@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#bhmpg").click(function(){document.location.href="AditKulkarniWebsite_Homepage.html"});$("#bppg").click(function(){document.location.href="Professional.html"});$("#bccpg").click(function(){document.location.href="Co-curricular.html"});$("#bcmpg").click(function(){document.location.href="ContactMe.html"})})
